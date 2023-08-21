@@ -1,0 +1,18 @@
+Important File And Folders
+1)package.json :- In this file have details of your project, for example which command will start the project. Dependencies are also their.
+2)node_modules:-when you run the code npm install so this node file will rebuild.
+3)src folder:-The most imp folder
+  1)app:-This is component (component is piece of code which we can reuse)
+  2)assets:-For storing images we use assets
+  3)enviroments:-for publish project
+  4)index.html:-This one file will load first of your project 
+  5)main.js:-this file will use or store bootstrap to work angular html file
+  6)style.css:- This is global file
+
+
+What is Component :- Component is a building block. For specific functionality.
+for creating component command line:- ng generate component componentname
+
+Inline-Style:- ng generate component componentname --inline-style
+inline-template:- ng generate component componentname --inline-template
+for using both:- ng generate component componentname --inline-template --inline-style
