@@ -16,3 +16,8 @@ for creating component command line:- ng generate component componentname
 Inline-Style:- ng generate component componentname --inline-style
 inline-template:- ng generate component componentname --inline-template
 for using both:- ng generate component componentname --inline-template --inline-style
+
+Module :- ng generate module user-auth
+To create component in module folder for example in user-auth, write below code:
+
+Functions in Angular:-
