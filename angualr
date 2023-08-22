@@ -20,4 +20,34 @@ for using both:- ng generate component componentname --inline-template --inline-
 Module :- ng generate module user-auth
 To create component in module folder for example in user-auth, write below code:
 
-Functions in Angular:-
+Events in Angular:-
+1)keyUp:- when we release the click so data will come
+2)kedown: when we click the key then will the data will come
+3)blur :  when we release the select then the value will come
+
+In angular if you want to write if else condition write like below:
+type==='add' ?this.count++:this.count--;
+
+Ifelse Conditoon:-
+*ngIf="show; then ifblock else elseblock" 
+
+SwitchCase condition:
+<div [ngSwitch]="color">
+    <h1 *ngSwitch="'red'" style="color:red;">Red Color</h1>
+    <h1 *ngSwitch="'green'" style="color:green;">Green Color</h1>
+    <h1 *ngSwitchDefault>Unkown Color</h1>
+</div>
+
+Forloop :
+ts file:
+users=['Anil','Bhaker','sam','peter','bruce'];
+  usersDetails=[
+    {name:'Anil',email:'Anil@gmail.com',phone:'8888'},
+    {name:'Bhaker',email:'Bhaker@gmail.com',phone:'1111'},
+    {name:'sam',email:'sam@gmail.com',phone:'4569'},
+    {name:'peter',email:'peter@gmail.com',phone:'3556'},
+    {name:'bruce',email:'bruce@gmail.com',phone:'47894'}
+  ];
+html file:
+<h3 *ngFor="let item of users">Name is : {{item}}</h3>
+<h3 *ngFor="let item of usersDetails">{{item.name}}--{{item.email}}--{{item.phone}}</h3>
