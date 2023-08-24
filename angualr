@@ -51,3 +51,42 @@ users=['Anil','Bhaker','sam','peter','bruce'];
 html file:
 <h3 *ngFor="let item of users">Name is : {{item}}</h3>
 <h3 *ngFor="let item of usersDetails">{{item.name}}--{{item.email}}--{{item.phone}}</h3>
+
+Todolist:-
+ts.file:
+list:any[]=[];
+addTask(item:string)
+  {
+    this.list.push({id:this.list.length,name:item})
+    console.warn(this.list);
+  }
+  removeTask(id:number)
+  {
+    console.warn(id)
+    this.list=this.list.filter(item=>item.id!==id)
+  }
+html file:-
+<input type="text" placeholder="Enter New Task" #task />
+<br>
+<button (click)="addTask(task.value)">Add Task</button>
+<ul *ngFor="let item of list">
+    <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button></li>
+</ul>
+
+Send Data Parent To Child Component:
+child.html:
+<h1>{{item}}</h1>
+child.ts:
+ @Input () item=0;
+app.html:
+<app-child [item]="data2"></app-child>
+<button (click)="updateChild()">Update Child Component</button>
+app.ts:
+  data2=10;
+  updateChild(){
+    this.data2=Math.floor(Math.random()*10); 
+  }
+
+
+Reusable Component:
+
